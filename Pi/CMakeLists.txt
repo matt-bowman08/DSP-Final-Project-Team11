@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.13)
 
+set(PICO_BOARD pico2)
+
 include(pico_sdk_import.cmake)
 
 project(pico_fft_display C CXX ASM)
@@ -11,7 +13,7 @@ add_executable(pico_fft_display
     src/adc_sampler.c
     src/fpga_spi.c
     src/band_processor.c
-    src/led_display.c
+    src/max7219_display.c
 )
 
 target_include_directories(pico_fft_display PRIVATE
